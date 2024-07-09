@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+
+{% block home_active %}active{% endblock %}
+
+{% block content %}
+
+<div class="container">
+  <br>
+  <h3>Add your todos here</h3>
+
+  <form action="/" method="POST">
+    <div class="mb-3">
+      <label for="" class="form-label">Task</label>
+      <input type="text" class="form-control" id="" name="task" placeholder="Ex: practice in LeetCode" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Add</button><br>
+  </form>
+
+
+  {% if todos|length == 0 %}
+  <div class="alert alert-info mt-3" role="alert">
+    No todos found. Add your first todo now!
+  </div>
+  {% else %}
+  <br>
+  <h4 style="text-align:center">Your todo list</h4>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col-7">S.No</th>
+        <th scope="col" style="width: 30rem;">Task</th>
+        <th scope="col">Created</th>
+        <th scope="col">Status</th>
+        <th scope="col" style="text-align: center; width: 11rem;">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for todo in todos %}
+      <tr>
+        <th scope="row">{{ loop.index }}</th>
+        {% if todo.status %}
+        <td><s>{{todo.task}}</s></td>
+        {% else %}
+        <td>{{todo.task}}</td>
+        {% endif %}
+
+        <td>{{todo.created.strftime("%Y-%m-%d %I:%M:%S %p")}}</td>
+        <td>
+          <form action="/todo_status/{{ todo.todo_id }}" method="POST" style="display:inline;">
+            <input class="form-check-input" type="hidden" name="status" value="{{ not todo.status }}">
+            <input class="form-check-input" type="checkbox" name="status" id="" {% if todo.status %} checked {% endif %}
+              onchange="this.form.submit();">
+          </form>
+        </td>
+        <td>
+          {% if todo.status %}
+          <button class="btn btn-primary" disabled="disabled">Update</button>
+          {% else %}
+          <a href="/update/{{todo.todo_id}}" class="btn btn-primary">Update</a>
+          {% endif %}
+          <a href="/delete/{{todo.todo_id}}" class="btn btn-primary" di>Delete</a>
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+
+  {% endif %}
+
+</div>
+
+{% endblock content %}

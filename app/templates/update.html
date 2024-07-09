@@ -1,0 +1,89 @@
+{% extends 'base.html' %}
+
+
+{% block style %}
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+
+    .navbar {
+        position: sticky;
+        top: 0;
+        width: 100%;
+        z-index: 1;
+    }
+
+    .wrapper {
+        flex: 1;
+        /* Flex grow to take up remaining space */
+        display: flex;
+        flex-direction: column;
+    }
+
+    .content {
+        flex: 1;
+        /* Flex grow to take up remaining space */
+        padding: 20px;
+    }
+
+    footer {
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 10px 0;
+        position: relative;
+        bottom: 0;
+    }
+
+    footer p,
+    footer ul {
+        margin: 0;
+        padding: 0;
+    }
+
+    footer ul {
+        list-style-type: none;
+    }
+
+    footer ul li {
+        display: inline-block;
+        margin-right: 10px;
+    }
+
+    footer ul li a {
+        color: #fff;
+        text-decoration: none;
+    }
+
+    h1 {
+        text-align: center;
+    }
+
+    .steps {
+        margin-bottom: 20px;
+    }
+
+    .step {
+        margin-bottom: 10px;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1>Update Todo</h1>
+    <form action="/update/{{todo.todo_id}}" method="POST">
+        <div class="mb-3">
+            <label for="" class="form-label">Task</label>
+            <input type="text" class="form-control" id="" aria-describedby="emailHelp" name="task" value="{{todo.task}}"
+                required>
+        </div>
+        <button type="submit" class="btn btn-primary">Update</button>
+    </form>
+</div>
+{% endblock content %}

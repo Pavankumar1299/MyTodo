@@ -1,0 +1,79 @@
+{% extends 'base.html' %}
+
+{% block style %}
+<link rel="stylesheet" href="static/css/style.css">
+{% endblock %}
+
+{% block about_active %}active{% endblock %}
+
+{% block content %}
+<div class="container">
+  <br>
+  <div class="row justify-content-center">
+    <div class="col-auto">
+      <div class="card mb-3" style="max-width: 70rem;">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="static/img/me.png" class="img-fluid rounded-start" alt="...">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Pavankumar V Pattar</h5>
+              <p class="card-text">"Welcome to my project! This user-friendly application, built with Flask and
+                Bootstrap, can be customized to fit your needs. You can easily edit and adapt it for your own projects.
+                Feel free to explore and make it your own. If you have any questions or would like to collaborate,
+                contact me below. I have provided my contact profiles for your convenience."
+              </p>
+            </div>
+            <br>
+            <div class="contact mt-5">
+              <ul>
+                <li><a href="https://www.linkedin.com/in/pavankumar-pattar-1a02b22a5" target="_blank"><button
+                      class="btn btn-primary"><i class="bi bi-linkedin "></i></button></a></li>
+                <li><a class="btn btn-primary" href="https://leetcode.com/u/pavanvp1299/" target="_blank"><img
+                      src="https://leetcode.com/favicon-96x96.png" alt="LeetCode" style="width: 1em; height: 1em;">
+                  </a></li>
+                <li><a href="mailto:pavanvp1299@example.com" target="_blank"><button class="btn btn-primary"><i
+                        class="bi bi-envelope-at-fill"></i></button></a>
+                  </i></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <br>
+      <h3>How to Use</h3>
+
+      <div class="steps card p-3">
+        <div class="steps ">
+          <div class="step">
+            <h5>Add a Task:</h5>
+            <p class="fw-normal">To add a new task, click on the "Add Task" button. Enter the task details and submit
+              the form.</p>
+          </div>
+
+          <div class="step">
+            <h5>Update a Task:</h5>
+            <p>To update a task, click on the task you want to update. Edit the task details and save the changes.</p>
+          </div>
+
+          <div class="step">
+            <h5>Delete a Task:</h5>
+            <p>To delete a task, click on the delete icon next to the task. Confirm the deletion when prompted.</p>
+          </div>
+
+          <div class="step">
+            <h5>Mark Task as Done:</h5>
+            <p>To mark a task as done, click on the checkbox or the "Mark as Done" button next to the task and update
+              button will "disable". Then you can delete it. If you don't want to delete a task and update it uncheck
+              the checkbox then update it.</p>
+          </div>
+        </div>
+
+        <p>Feel free to explore and manage your tasks efficiently using my todo app!</p>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock content %}

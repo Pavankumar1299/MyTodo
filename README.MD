@@ -39,8 +39,8 @@ This is a straightforward Todo application designed for managing tasks efficient
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/project-name.git
-   cd project-name
+   git clone https://github.com/Pavankumar1299/MyTodo.git
+   cd MyTodo
    ```
 
 2. Set up a virtual environment (optional but recommended):
@@ -80,8 +80,8 @@ Contributions are welcome! Here's how you can contribute to improve the project:
 
 1. Fork the repository and clone it locally.
     ```bash
-    git clone https://github.com/your-username/project-name.git
-    cd project-name
+    git clone https://github.com/Pavankumar1299/MyTodo.git
+    cd MyTodo
     ```
 
 2. Create a new branch for your feature or bug fix.

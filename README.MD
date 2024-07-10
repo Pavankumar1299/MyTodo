@@ -31,7 +31,7 @@ This is a straightforward Todo application designed for managing tasks efficient
 
 ## Screenshot
 
-![App Screenshot](static/img/home.png)
+![App Screenshot](app/static/img/home.png)
 
 ## Requirements
 

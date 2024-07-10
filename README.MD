@@ -28,6 +28,11 @@ This is a straightforward Todo application designed for managing tasks efficient
 - Mark as Done: Mark tasks as completed.
 - List Todos: View all tasks in a list format for quick reference.
 
+
+## Screenshot
+
+![App Screenshot](static/img/home.png)
+
 ## Requirements
 
 - List dependencies and requirements needed to run the project is defined in requirements file.

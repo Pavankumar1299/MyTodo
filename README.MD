@@ -6,6 +6,7 @@ A simple Flask-based Todo application for managing tasks. Add, update, delete, m
 
 - [Overview](#overview)
 - [Features](#features)
+- [Screenshots](#Screenshots)
 - [Requirements](#requirements)
 - [Getting Started](#getting-started)
   - [Installation](#installation)
@@ -28,10 +29,16 @@ This is a straightforward Todo application designed for managing tasks efficient
 - Mark as Done: Mark tasks as completed.
 - List Todos: View all tasks in a list format for quick reference.
 
+## Screenshots
 
-## Screenshot
-
+- Add Todo
 ![App Screenshot](app/static/img/home.png)
+
+- Update Todo
+![App Screenshot](app/static/img/update.png)
+
+- How to use
+![App Screenshot](app/static/img/use.png)
 
 ## Requirements
 
@@ -69,10 +76,7 @@ This is a straightforward Todo application designed for managing tasks efficient
    ```
 
 2. Run the application:
-   ```bash
-   flask run
-   ```
-   or
+ 
    ```bash
    python run.py
    ```
